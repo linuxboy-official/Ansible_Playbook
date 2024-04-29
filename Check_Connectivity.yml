@@ -1,0 +1,7 @@
+---
+- name: "Check connectivity"
+  hosts: localhost
+
+  tasks:
+    - name: "Pinging hosts"
+      ping:
