@@ -1,0 +1,9 @@
+---
+- name: "Print Hello World in console"
+  hosts: servers
+
+
+  tasks:
+  -  name: "Print Hello World in console using debug module"
+     debug: msg="Hello World from ansible"
+
