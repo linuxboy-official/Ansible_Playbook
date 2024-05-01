@@ -1,0 +1,12 @@
+---
+- name: "This is multiple task in one file"
+  hosts: servers
+
+
+  tasks:
+  -  name: "Task number1 that ping servers"
+     ping:
+
+
+  -  name: "Task number2 that print helloworld"
+     debug: msg="Hello World"
