@@ -1,0 +1,18 @@
+---
+- name: This playbook is installing httpd on centos server
+  hosts: server1
+  become: yes
+  become_user: root
+
+
+  tasks:
+  -  name: Installing httpd on centos
+     yum:
+      name: httpd
+      state: present
+
+
+  -  name: Enable httpd on loading 
+     systemd:
+      name: httpd
+      state: started
