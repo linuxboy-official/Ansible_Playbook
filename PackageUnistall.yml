@@ -1,0 +1,18 @@
+---
+- name: This Playbook unistall http server on centos server
+  hosts: server1
+  become: yes
+  become_user: root
+
+
+  tasks:
+  -  name: Check httpd service to exist and stop it
+     systemd:
+       name: httpd
+       state: stopped
+
+
+  -  name: Unistall httpd server on centos
+     yum:
+       name: httpd
+       state: absent
