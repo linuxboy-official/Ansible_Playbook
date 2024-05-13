@@ -1,0 +1,12 @@
+---
+- name: Making a new user on remote host
+  hosts: server2
+  become: true
+  become_user: root
+
+  tasks:
+    - name: Making a new user on server2
+      user:
+        name: bluedragon
+        home: /home/bluedragon
+        shell: /bin/bash
